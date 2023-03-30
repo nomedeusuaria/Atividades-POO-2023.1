@@ -1,0 +1,23 @@
+setTitle("Agenda de Aniversários");
+
+setSize( width: 800, height: 600); //tamanho da janela
+
+setLocation( x: 150, y:150);
+
+setResizable(false);
+
+getContentPane() .setBackground(Color.white);
+
+linhal = new JLabel( text: "Minha Agenda de Aniversários", JLabel.CENTER);
+Linhal.setForeground(Color.red);
+
+Llinhal.setFont(new Font( name: "Serif", Font.BOLD, size: 24));
+
+linha2 = new JLabel(boloImg, JLabel.CENTER);
+
+botaoAdicionar = new JButton( text: "Adicionar",addImg);
+botaoAdicionar.addActionListener (new AgendaAddController(agenda, janela: this));
+botaoPesquisar = new JButton( text: "Pesquisar",pesqImg);
+botaoPesquisar.addActionListener(new AgendaSearchController(agenda, janela: this));
+botaoRemover = new JButton( text: "Remover", removeImg);
+botaoRemover.addActionListener(new AgendaRemoveController(agenda, janela: this));

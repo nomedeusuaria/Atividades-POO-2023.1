@@ -1,0 +1,18 @@
+setTitle("Agenda de Aniversários");
+
+setSize( width: 400, height: 400); //tamanho da janela
+setLocation( x: 150, y:150);
+
+setResizable(false);
+
+getContentPane() .setBackground(Color .white);
+
+linhal = new JLabel( text: "Minha Agenda de Aniversários", JLabel.CENTER);
+TLinhal.setForeground(Color.red);
+
+linhal.setFont(new Font( name: "Serif", Font.BOLD, size: 24));
+Tinha2 = new JLabel(boloImg, JLabel.CENTER);
+getContentPane() .setLayout(new GridLayout( rows: 3, cols: 1));
+getContentPane() .add(Linhal);
+
+getContentPane() .add(Llinha2);
