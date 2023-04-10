@@ -9,6 +9,6 @@ public class ClientePF extends Cliente{
     }
     @Override
     public String getId(){
-        return this.CPF;
+        return "CPF: " + this.CPF;
     }
 }
