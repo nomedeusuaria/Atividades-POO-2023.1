@@ -8,6 +8,6 @@ public class ClientePJ extends Cliente {
         this.CNPJ = CNPJ;
     }
     public String getId() {
-        return "CNPJ: " +this.CNPJ;
+        return this.CNPJ;
     }
 }

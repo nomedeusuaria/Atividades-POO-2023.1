@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,5 +32,27 @@ public class SistemaComercialMap {
             this.produtos.put(produto.getCode(), produto);
             return true;
         }
+    }
+
+    public boolean existeCliente(Cliente cliente){
+        return this.clientes.containsKey(cliente.getId());
+    }
+
+    public Cliente pesquisaCliente(String id) throws ClienteNaoExisteException{
+        if(this.clientes.containsKey(id)){
+            return this.clientes.get(id);
+        }
+        throw new ClienteNaoExisteException("Cliente não existe");
+    }
+
+    public Collection<Produto> pesquisaProdutosDaCategoria(CategoriaProduto categoria){
+        Collection<Produto> produtos1 = new ArrayList<Produto>();
+        for (var produtosPorCategoria_:this.produtos.entrySet()) {
+            Produto produtosPorCategoria = produtosPorCategoria_.getValue();
+            if(produtosPorCategoria.getCategoria().equals(categoria)){
+                produtos1.add(produtosPorCategoria);
+            }
+        }
+        return produtos1;
     }
 }
